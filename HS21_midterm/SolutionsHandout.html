@@ -1,0 +1,1143 @@
+<!DOCTYPE HTML>
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><title>Lösungen / Solutions: AINF1166, Informatik I (V+Ü) (Informatics I)</title><style>pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style></head><body><h1>Lösungen / Solutions: AINF1166, Informatik I (V+Ü) (Informatics I)</h1><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>Questions 1</h2><h3>Gefragt / Asked: 2</h3><div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>Inferring Types / Typeninferenz</h2><h3>Punkte / Points: 1 Kprim</h3><h3>Frage / Question</h3><div><p>EN: Given the following code, what types can variable &#39;b&#39; take?</p><p>DE: Gegeben folgenden Code, welche Typen kann die Variable &#39;b&#39; haben?</p></div><h3>Snippet</h3><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="bu">input</span>(<span class="st">&#39;Please enter your age&#39;</span>)</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a.isdigit() <span class="cf">if</span> <span class="kw">not</span> a <span class="cf">else</span> a</span></code></pre></div><h3>Antworten / Answers</h3><ul><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="bu">bool</span></span></code></pre></div></div><b>Correct</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="bu">int</span></span></code></pre></div></div><b>False</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>NoneType</span></code></pre></div></div><b>False</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="bu">str</span></span></code></pre></div></div><b>Correct</b></li></ul></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>Binary boolean expressions / Binärer boolsche Ausdrücke</h2><h3>Punkte / Points: 1 Kprim</h3><h3>Frage / Question</h3><div><p>EN: Which of the values for &#39;a&#39; and &#39;b&#39; evaluate the following expression to True?</p><p>DE: Mit welchen Werten für &#39;a&#39; und &#39;b&#39; wird die folgende Expression als True evaluiert?</p></div><h3>Snippet</h3><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="bu">bool</span>(a <span class="kw">or</span> b)</span></code></pre></div><h3>Antworten / Answers</h3><ul><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="va">True</span>, b <span class="op">=</span> <span class="dv">0</span></span></code></pre></div></div><b>Correct</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="va">False</span>, b <span class="op">=</span> <span class="dv">0</span></span></code></pre></div></div><b>False</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="kw">not</span> <span class="op">-</span><span class="dv">2</span>, b <span class="op">=</span> <span class="dv">0</span></span></code></pre></div></div><b>False</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&#39;Something&#39;</span>, b <span class="op">=</span> <span class="kw">not</span> <span class="va">None</span></span></code></pre></div></div><b>Correct</b></li></ul></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>Boolean expressions / Boolsche Ausdrücke</h2><h3>Punkte / Points: 1 Kprim</h3><h3>Frage / Question</h3><div><p>EN: For which of the following values &#39;a&#39; and &#39;b&#39; does this expression evaluate as True?</p><p>DE: Für welche der folgenden Werte Werte &#39;a&#39; und &#39;b&#39; evaluiert diese Expression als True?</p></div><h3>Snippet</h3><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="bu">bool</span>(<span class="dv">4</span> <span class="op">&lt;=</span> a <span class="op">&lt;</span> <span class="dv">40</span> <span class="kw">and</span> b)</span></code></pre></div><h3>Antworten / Answers</h3><ul><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">16</span><span class="op">**</span><span class="fl">0.5</span>, b <span class="op">=</span> <span class="dv">1</span></span></code></pre></div></div><b>Correct</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="st">&#39;not (1 == 1)&#39;</span>, b <span class="op">=</span> <span class="op">-</span><span class="dv">2</span></span></code></pre></div></div><b>False</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">39</span>, b <span class="op">=</span> (<span class="kw">not</span> <span class="kw">not</span> (<span class="dv">1</span> <span class="op">==</span> <span class="dv">1</span>))</span></code></pre></div></div><b>Correct</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">4</span>, b <span class="op">=</span> <span class="va">True</span> <span class="kw">or</span> <span class="kw">not</span> <span class="va">True</span></span></code></pre></div></div><b>Correct</b></li></ul></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>Compound Types / Compound Types</h2><h3>Punkte / Points: 1 Kprim</h3><h3>Frage / Question</h3><div><p>EN: which of the following are compound types?</p><p>DE: Welche der folgenden Typen sind Compound Types?</p></div><h3>Antworten / Answers</h3><ul><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="bu">str</span></span></code></pre></div></div><b>Correct</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>NoneType</span></code></pre></div></div><b>False</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="bu">int</span></span></code></pre></div></div><b>False</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="bu">complex</span></span></code></pre></div></div><b>Correct</b></li></ul></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>List and tuple operations / Listen- und Tupel-Operationen</h2><h3>Punkte / Points: 1 Kprim</h3><h3>Frage / Question</h3><div><p>EN: Which of the following are valid expression for the given &#39;lst&#39; or &#39;tpl&#39; variables?</p><p>DE: Welche der folgenden Expressions sind für die gegebenen Variablen &#39;lst&#39; und &#39;tpl&#39; gültig?</p></div><h3>Snippet</h3><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>lst <span class="op">=</span> [<span class="st">&#39;a&#39;</span>, <span class="dv">1</span>, var1]</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>tpl <span class="op">=</span> (<span class="dv">2</span>,)</span></code></pre></div><h3>Antworten / Answers</h3><ul><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="kw">del</span>(lst[<span class="dv">3</span>])</span></code></pre></div></div><b>False</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="kw">del</span>(lst[<span class="dv">0</span>])</span></code></pre></div></div><b>False</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>lst.append(tpl[<span class="dv">0</span>])</span></code></pre></div></div><b>Correct</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>tpl[<span class="dv">0</span>] <span class="op">=</span> lst[<span class="dv">0</span>]</span></code></pre></div></div><b>False</b></li></ul></div></div></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>Programming 1</h2><h3>Gefragt / Asked: 2</h3><div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>all_falsy</h2><h3>Punkte / Points: 7</h3><h3>Frage / Question</h3>
+<h5>DEUTSCH</h5>
+<p>Implementieren sie eine Funktion namens <span style="font-family: terminal, monaco, monospace;">all_falsy</span>, die eine Liste von beliebigen Werten <span style="font-family: terminal, monaco, monospace;">values</span> annimmt. Die Funktion soll bestimmen, ob alle Werte in <span style="font-family: terminal, monaco, monospace;">values</span> als <span style="font-family: terminal, monaco, monospace;">False</span> evaluieren. Wenn ja, soll die Funktion <span style="font-family: terminal, monaco, monospace;">True</span> zurückgeben, aber falls irgendein Wert als <span style="font-family: terminal, monaco, monospace;">True</span> evaluiert, soll <span style="font-family: terminal, monaco, monospace;">False</span> zurückgegeben werden. Für eine leere Liste soll <span style="font-family: terminal, monaco, monospace;">True</span> zurückgegeben werden.</p>
+
+<p>Sie können davon ausgehen, dass die Funktion nur mit gültigen Parametern aufgerufen wird.</p>
+
+<h5>ENGLISH</h5>
+<p>Implement a function <span style="font-family: terminal, monaco, monospace;">all_falsy</span>, which takes a list of arbitrary values as a parameter <span style="font-family: terminal, monaco, monospace;">values</span>. The function should determine if all values in <span style="font-family: terminal, monaco, monospace;">values</span> evaluate as <span style="font-family: terminal, monaco, monospace;">False</span>. If yes, it should return <span style="font-family: terminal, monaco, monospace;">True</span>, but if any of the values evaluate as <span style="font-family: terminal, monaco, monospace;">True</span>, it should return <span style="font-family: terminal, monaco, monospace;">False</span>. For an empty list, the function should return <span style="font-family: terminal, monaco, monospace;">True</span>.</p>
+
+<p>You can assume that the function is only called with valid parameters.</p>
+
+<p>Fügen Sie ihre Lösung in folgendes Textfeld ein / Paste your solution into the following text field.</p>
+<div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> all_falsy(values):</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a><span class="co">#assert all_falsy([False, &quot;&quot;, 0, []])</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a><span class="co">#assert (not all_falsy([False, &quot;no&quot;, 0.1]))</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a><span class="co">#assert all_falsy([[]])</span></span></code></pre></div></div><h3>Lösung / Solution</h3><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> all_falsy(values):</span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># the traditional way:</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> v <span class="kw">in</span> values:</span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> v:</span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">False</span></span>
+<span id="8"><a href="#8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">True</span></span></code></pre></div></div></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>count_characters</h2><h3>Punkte / Points: 7</h3><h3>Frage / Question</h3>
+<h5>DEUTSCH</h5>
+<p>
+    Implementieren Sie eine Funktion
+    <span style="font-family: terminal, monaco, monospace;">count_characters</span>,
+    welche einen einzelnen String
+    <span style="font-family: terminal, monaco, monospace;">text</span>
+    als einzigen Parameter annimmt. Die Funktion soll ein Dictionary in der Form
+    <span style="font-family: terminal, monaco, monospace;">{char: count}</span>
+    zurückgeben, welches angibt, wie oft jeder Buchstabe in
+    <span style="font-family: terminal, monaco, monospace;">text</span>
+    vorkommt.
+    Beachten Sie die Assertions als Beispiele für die Anwendung von
+    <span style="font-family: terminal, monaco, monospace;">count_characters</span>.
+</p>
+
+<h5>ENGLISH</h5>
+<p>
+    Implement a function
+    <span style="font-family: terminal, monaco, monospace;">count_characters</span>,
+    which accepts a single String
+    <span style="font-family: terminal, monaco, monospace;">text</span>
+    as the only paramter. The function should return a dictionary in the form
+    <span style="font-family: terminal, monaco, monospace;">{char: count}</span>
+    which represents how many times each character appears in
+    <span style="font-family: terminal, monaco, monospace;">text</span>.
+    Consider the assertions as examples for how
+    <span style="font-family: terminal, monaco, monospace;">count_characters</span>
+    can be used.
+</p>
+
+<p>Fügen Sie ihre Lösung in folgendes Textfeld ein / Paste your solution into the following text field.</p>
+<div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> count_characters(text):</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(count_characters(&quot;hello&quot;) == {&quot;h&quot;: 1, &quot;e&quot;: 1, &quot;l&quot;: 2, &quot;o&quot;: 1})</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(count_characters(&quot;Прогресс&quot;) == {&quot;П&quot;: 1, &quot;р&quot;: 2, &quot;о&quot;: 1, &quot;г&quot;: 1, &quot;е&quot;: 1, &quot;с&quot;: 2})</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(count_characters(&quot;&lt;3&quot;) == {&quot;&lt;&quot;: 1, &quot;3&quot;: 1})</span></span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(count_characters(&quot;&quot;) == {})</span></span></code></pre></div></div><h3>Lösung / Solution</h3><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> count_characters(text):</span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a>    res <span class="op">=</span> {}</span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> c <span class="kw">in</span> text:</span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> c <span class="kw">not</span> <span class="kw">in</span> res:</span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a>            res[c] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="8"><a href="#8" aria-hidden="true" tabindex="-1"></a>        res[c] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="9"><a href="#9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> res</span>
+<span id="10"><a href="#10" aria-hidden="true" tabindex="-1"></a></span></code></pre></div></div></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>duplicates</h2><h3>Punkte / Points: 7</h3><h3>Frage / Question</h3>
+<h5>DEUTSCH</h5>
+<p>
+    Implementieren Sie eine Funktion
+    <span style="font-family: terminal, monaco, monospace;">duplicates_of</span>,
+    welche zwei Listen
+    <span style="font-family: terminal, monaco, monospace;">lst</span>
+    und
+    <span style="font-family: terminal, monaco, monospace;">xs</span>
+    annimmt und einen Integer zurückgibt, welcher angibt, wie of die Elemente in
+    <span style="font-family: terminal, monaco, monospace;">xs</span>
+    in
+    <span style="font-family: terminal, monaco, monospace;">lst</span>.
+    vorkommen. Beachten Sie, dass sowohl
+    <span style="font-family: terminal, monaco, monospace;">lst</span>
+    als auch
+    <span style="font-family: terminal, monaco, monospace;">xs</span>
+    Werte von verschiedenen Typen enthalten können, und dass beide Listen Duplikate enthalten können.
+    Es ist nicht nötig, Duplikate zu entfernen oder besonders zu behandeln.
+    Beachten Sie die Assertions als Beispiele für die Anwendung von
+    <span style="font-family: terminal, monaco, monospace;">duplicates_of</span>.
+</p>
+
+
+<h5>ENGLISH</h5>
+<p>
+    Implement a function
+    <span style="font-family: terminal, monaco, monospace;">duplicates_of</span>,
+    which accepts two lists
+    <span style="font-family: terminal, monaco, monospace;">lst</span>
+    and
+    <span style="font-family: terminal, monaco, monospace;">xs</span>
+    and returns an integer representing how many times the items in
+    <span style="font-family: terminal, monaco, monospace;">xs</span>
+    appear in
+    <span style="font-family: terminal, monaco, monospace;">lst</span>.
+    Please note both
+    <span style="font-family: terminal, monaco, monospace;">lst</span>
+    and
+    <span style="font-family: terminal, monaco, monospace;">xs</span>
+    can contains values of various types, and that both lists can contain duplicates.
+    It is not necessary to remove duplicates or treat them specially.
+    Consider the assertions as examples for how
+    <span style="font-family: terminal, monaco, monospace;">duplicates_of</span>.
+    can be used.
+</p>
+
+<p>Fügen Sie ihre Lösung in folgendes Textfeld ein / Paste your solution into the following text field.</p>
+<div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> duplicates_of(lst, xs):</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(duplicates_of([], []) == 0)</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(duplicates_of([1], [1]) == 1)</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(duplicates_of([True, True], [True]) == 2)</span></span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(duplicates_of([1, 1, &#39;hello&#39;, 3], [1, &#39;hello&#39;, 1]) == 5)</span></span></code></pre></div></div><h3>Lösung / Solution</h3><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> duplicates_of(lst, xs):</span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># For this task we assume lst and xs are always a non-null list.</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">sum</span> <span class="op">=</span> <span class="dv">0</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> n <span class="kw">in</span> lst:</span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> x <span class="kw">in</span> xs:</span>
+<span id="8"><a href="#8" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> x <span class="op">==</span> n:</span>
+<span id="9"><a href="#9" aria-hidden="true" tabindex="-1"></a>                <span class="bu">sum</span> <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="10"><a href="#10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span></span>
+<span id="11"><a href="#11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># or using a list comprehenion:</span></span>
+<span id="12"><a href="#12" aria-hidden="true" tabindex="-1"></a>    <span class="co">#return sum([x == n for x in xs for n in lst])</span></span></code></pre></div></div></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>greetings</h2><h3>Punkte / Points: 7</h3><h3>Frage / Question</h3>
+<h5>DEUTSCH</h5>
+    Implementieren Sie eine Funktion
+    <span style="font-family: terminal, monaco, monospace;">greetings</span>,
+    welche eine Liste von Strings (Namen von Personen)
+    <span style="font-family: terminal, monaco, monospace;">names</span>,
+    annimmt und einen String zurückgibt, um alle Personen in der Liste zu grüssen.
+    Falls die Liste leer ist, soll
+    <span style="font-family: terminal, monaco, monospace;">greetings</span>,
+    den String
+    <span style="font-family: terminal, monaco, monospace;">Hello?</span>.
+    zurückgeben. In allen anderen Fällen soll die Funktion einen String zurückgeben, der mit
+    <span style="font-family: terminal, monaco, monospace;">Hello</span>,
+    beginnt, gefolgt von den Namen in
+    <span style="font-family: terminal, monaco, monospace;">names</span>,
+    kommagetrennt, mit Ausnahme der letzten zwei Namen, welche mit dem Wort
+    <span style="font-family: terminal, monaco, monospace;">and</span>.
+    getrennt werden sollen. In diesen Fällen soll der String mit einem Punkt enden.
+    Sie können annehmen, dass
+    <span style="font-family: terminal, monaco, monospace;">names</span>
+    immer eine Liste von Strings ist.
+    Beachten Sie die Assertions als Beispiele für die Anwendung von
+    <span style="font-family: terminal, monaco, monospace;">greetings</span>.
+
+<h5>ENGLISH</h5>
+<p>
+    Implement a function
+    <span style="font-family: terminal, monaco, monospace;">greetings</span>,
+    which accepts a list of strings
+    <span style="font-family: terminal, monaco, monospace;">names</span>,
+    of people's names, and returns a string greeting all of the people
+    in the list.
+    If the list of names is empty, then
+    <span style="font-family: terminal, monaco, monospace;">greetings</span>,
+    returns the string
+    <span style="font-family: terminal, monaco, monospace;">Hello?</span>.
+    If all other cases, the function returns a string starting with
+    <span style="font-family: terminal, monaco, monospace;">Hello</span>,
+    followed by the names in
+    <span style="font-family: terminal, monaco, monospace;">names</span>,
+    as given, all separated by a comma, with execption of the last two names
+    which are separated by the word
+    <span style="font-family: terminal, monaco, monospace;">and</span>.
+    In this last scenario, the string computed always terminates with a dot.
+    You can assume that
+    <span style="font-family: terminal, monaco, monospace;">names</span>
+    is always a list of strings.
+    Consider the assert statements given below as examples for
+    <span style="font-family: terminal, monaco, monospace;">greetings</span>.
+</p>
+
+<p>Fügen Sie ihre Lösung in folgendes Textfeld ein / Paste your solution into the following text field.</p>
+<div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> greetings(names):</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(greetings([]) == &#39;Hello?&#39;)</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(greetings([&#39;Josh&#39;]) == &#39;Hello Josh.&#39;)</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(greetings([&#39;Josh&#39;, &#39;Alice&#39;]) == &#39;Hello Josh and Alice.&#39;)</span></span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(greetings([&#39;Josh&#39;, &#39;Alice&#39;, &#39;Marie&#39;]) == &#39;Hello Josh, Alice and Marie.&#39;)</span></span></code></pre></div></div><h3>Lösung / Solution</h3><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> greetings(names):</span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># For this task we assume names is always a non-null list.</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a>    g <span class="op">=</span> <span class="st">&#39;Hello?&#39;</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> names:</span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a>        g <span class="op">=</span> <span class="st">&#39;Hello &#39;</span> <span class="op">+</span> <span class="st">&#39;, &#39;</span>.join(names[:<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="8"><a href="#8" aria-hidden="true" tabindex="-1"></a>        g <span class="op">+=</span> <span class="st">&#39; and &#39;</span> <span class="cf">if</span> <span class="bu">len</span>(names) <span class="op">&gt;</span> <span class="dv">1</span> <span class="cf">else</span> <span class="st">&#39;&#39;</span></span>
+<span id="9"><a href="#9" aria-hidden="true" tabindex="-1"></a>        g <span class="op">+=</span> <span class="ss">f&quot;</span><span class="sc">{</span>names[<span class="op">-</span><span class="dv">1</span>]<span class="sc">}</span><span class="ss">.&quot;</span></span>
+<span id="10"><a href="#10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> g</span></code></pre></div></div></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>is_sub_collection</h2><h3>Punkte / Points: 7</h3><h3>Frage / Question</h3>
+<h5>DEUTSCH</h5>
+<p>
+    Implementieren Sie eine Funktion
+    <span style="font-family: terminal, monaco, monospace;">is_sub_collection</span>,
+    welche zwei Listen
+    <span style="font-family: terminal, monaco, monospace;">a</span>
+    und
+    <span style="font-family: terminal, monaco, monospace;">b</span>
+    annimmt und
+    <span style="font-family: terminal, monaco, monospace;">True</span>
+    zurückgibt, wenn alle Elemente in
+    <span style="font-family: terminal, monaco, monospace;">b</span>
+    auch in
+    <span style="font-family: terminal, monaco, monospace;">a</span>.
+    vorkommen.
+    Ansonsten soll die Funktion
+    <span style="font-family: terminal, monaco, monospace;">False</span>
+    zurückgeben.
+    Ausserdem soll die Funktion immer
+    <span style="font-family: terminal, monaco, monospace;">True</span>
+    zurückgeben, falls
+    <span style="font-family: terminal, monaco, monospace;">b</span>
+    eine leere Liste ist, egal was der Inhalt von
+    <span style="font-family: terminal, monaco, monospace;">a</span>.
+    ist.
+    Sie können annehmen, dass die Werte in
+    <span style="font-family: terminal, monaco, monospace;">a</span>
+    und
+    <span style="font-family: terminal, monaco, monospace;">b</span>
+    immer Listen sind.
+    Beachten Sie die Assertions als Beispiele für die Anwendung von
+    <span style="font-family: terminal, monaco, monospace;">is_sub_collection</span>.
+</p>
+
+
+<h5>ENGLISH</h5>
+<p>
+    Implement a function
+    <span style="font-family: terminal, monaco, monospace;">is_sub_collection</span>,
+    which two lists of items
+    <span style="font-family: terminal, monaco, monospace;">a</span>, and
+    <span style="font-family: terminal, monaco, monospace;">b</span>,
+    and returns
+    <span style="font-family: terminal, monaco, monospace;">True</span>
+    if all of the elements found in
+    <span style="font-family: terminal, monaco, monospace;">b</span>
+    can also be found in
+    <span style="font-family: terminal, monaco, monospace;">a</span>.
+    The function returns
+    <span style="font-family: terminal, monaco, monospace;">False</span>
+    otherwise.
+    Furthermore, if
+    <span style="font-family: terminal, monaco, monospace;">b</span>
+    is an empty list, then the function always returns
+    <span style="font-family: terminal, monaco, monospace;">True</span>
+    regardless of the content of
+    <span style="font-family: terminal, monaco, monospace;">a</span>.
+    You can assume the values for
+    <span style="font-family: terminal, monaco, monospace;">a</span>
+    and
+    <span style="font-family: terminal, monaco, monospace;">b</span>
+    are always non-null lists.
+    Consider the assert statements given below as examples for
+    <span style="font-family: terminal, monaco, monospace;">is_sub_collection</span>.
+</p>
+
+<p>Fügen Sie ihre Lösung in folgendes Textfeld ein / Paste your solution into the following text field.</p>
+<div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_sub_collection(a, b):</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(is_sub_collection([], []))</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(not is_sub_collection([], [True]))</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(is_sub_collection([1, 2, 3, None], [None]))</span></span></code></pre></div></div><h3>Lösung / Solution</h3><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_sub_collection(a, b):</span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># For this task we assume a b are always non-null lists.</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> b:</span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> i <span class="kw">not</span> <span class="kw">in</span> a:</span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">False</span></span>
+<span id="8"><a href="#8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">True</span></span>
+<span id="9"><a href="#9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># or using a list comprehension, note that all([]) == True:</span></span>
+<span id="10"><a href="#10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># return all([i in a for i in b])</span></span></code></pre></div></div></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>no_unlucky</h2><h3>Punkte / Points: 7</h3><h3>Frage / Question</h3>
+<h5>DEUTSCH</h5>
+<p>Implementieren sie eine Funktion namens <span style="font-family: terminal, monaco, monospace;">no_unlucky</span>, die zwei Parameter annimmt: Eine Liste von ganzen Zahlen <span style="font-family: terminal, monaco, monospace;">values</span>, und eine ganze Zahl <span style="font-family: terminal, monaco, monospace;">unlucky</span>.</p>
+
+<p>Die Funktion soll die Summe jener Werte in <span style="font-family: terminal, monaco, monospace;">values</span> berechnen, die nicht durch <span style="font-family: terminal, monaco, monospace;">unlucky</span> teilbar sind. Falls <span style="font-family: terminal, monaco, monospace;">unlucky</span> <span style="font-family: terminal, monaco, monospace;">0</span> ist, sollen alle Werte in <span style="font-family: terminal, monaco, monospace;">values</span> aufaddiert werden. Die Funktion soll die resultierende Summe zurückgeben.</p>
+
+<p>Sie können davon ausgehen, dass die Funktion nur mit gültigen Parametern aufgerufen wird.</p>
+
+<h5>ENGLISH</h5>
+
+<p>Implement a function <span style="font-family: terminal, monaco, monospace;">no_unlucky</span>, which takes two parameters: a list of integers <span style="font-family: terminal, monaco, monospace;">values</span>, and an integer <span style="font-family: terminal, monaco, monospace;">unlucky</span>.</p>
+
+<p>The function should sum up all those values in <span style="font-family: terminal, monaco, monospace;">values</span> which are not divisible by <span style="font-family: terminal, monaco, monospace;">unlucky</span>. If <span style="font-family: terminal, monaco, monospace;">unlucky</span> is <span style="font-family: terminal, monaco, monospace;">0</span> all values in <span style="font-family: terminal, monaco, monospace;">values</span> should be summed up. Return the resulting sum from the function.</p>
+
+<p>You can assume that the function is only called with valid parameters.</p>
+
+<p>Fügen Sie ihre Lösung in folgendes Textfeld ein / Paste your solution into the following text field.</p>
+<div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> no_unlucky(values, unlucky):</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a><span class="co">#assert(no_unlucky([10, 24, 1], 13) == 35)</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a><span class="co">#assert(no_unlucky([13, 25], 13) == 25)</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a><span class="co">#assert(no_unlucky([13, 26], 13) == 0)</span></span></code></pre></div></div><h3>Lösung / Solution</h3><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> no_unlucky(values, unlucky):</span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">sum</span> <span class="op">=</span> <span class="dv">0</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> v <span class="kw">in</span> values:</span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> unlucky <span class="op">==</span> <span class="dv">0</span> <span class="kw">or</span> <span class="kw">not</span> v <span class="op">%</span> unlucky <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a>            <span class="bu">sum</span> <span class="op">+=</span> v</span>
+<span id="8"><a href="#8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span></span>
+<span id="9"><a href="#9" aria-hidden="true" tabindex="-1"></a></span></code></pre></div></div></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>shout</h2><h3>Punkte / Points: 7</h3><h3>Frage / Question</h3>
+<h5>DEUTSCH</h5>
+<p>Implementieren sie eine Funktion namens <span style="font-family: terminal, monaco, monospace;">shout</span>, die einen String als parameter <span style="font-family: terminal, monaco, monospace;">text</span> annimmt. Die Funktion soll diesen String in Grossbuchstaben zurückgeben, und dabei ein oder mehrere Ausrufezeichen anhängen. Wenn <span style="font-family: terminal, monaco, monospace;">text</span> keine Ausrufezeichen enthält, soll ein Ausrufezeichen angehängt werden. Wenn <span style="font-family: terminal, monaco, monospace;">text</span> ein oder mehrere Ausrufezeichen enthält, soll dieselbe Anzahl Ausrufezeichen zusätzlich angehängt werden.</p>
+
+<p>Sie können davon ausgehen, dass die Funktion nur mit gültigen Parametern aufgerufen wird.</p>
+
+<h5>ENGLISH</h5>
+
+<p>Implement a function <span style="font-family: terminal, monaco, monospace;">shout</span>, which takes a string as parameter <span style="font-family: terminal, monaco, monospace;">text</span>. The function should return this string in upper case with one or more exclamation marks added to the end. If <span style="font-family: terminal, monaco, monospace;">text</span> contains no exclamation marks, one exclamation mark should be appended. If <span style="font-family: terminal, monaco, monospace;">text</span> contains one or more exclamation marks, the same number of exclamation marks should be added to the end.</p>
+
+<p>You can assume that the function is only called with valid parameters.</p>
+
+<p>Fügen Sie ihre Lösung in folgendes Textfeld ein / Paste your solution into the following text field.</p>
+<div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> shout(text):</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a><span class="co">#assert(shout(&quot;Hello, God&quot;) == &quot;HELLO, GOD!&quot;)</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a><span class="co">#assert(shout(&quot;Hello, World!&quot;) == &quot;HELLO, WORLD!!&quot;)</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a><span class="co">#assert(shout(&quot;Hello! World?&quot;) == &quot;HELLO! WORLD?!&quot;)</span></span></code></pre></div></div><h3>Lösung / Solution</h3><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> shout(text):</span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a>    exclams <span class="op">=</span> text.count(<span class="st">&quot;!&quot;</span>)</span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> exclams <span class="op">==</span> <span class="dv">0</span>: exclams <span class="op">=</span> <span class="dv">1</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> text.upper() <span class="op">+</span> exclams <span class="op">*</span> <span class="st">&quot;!&quot;</span></span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a></span></code></pre></div></div></div></div></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>Questions 2</h2><h3>Gefragt / Asked: 2</h3><div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>Creating strings / Strings erstellen</h2><h3>Punkte / Points: 2 Kprim</h3><h3>Frage / Question</h3><div><p>EN: Which of the following expressions produces the following string: &#39;Josh bought a 1 gallon bottle of milk.&#39;</p><p>DE: Welche der folgenden Expressions generieren folgenden String: &#39;Josh bought a 1 gallon bottle of milk.&#39;</p></div><h3>Antworten / Answers</h3><ul><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="ss">f&#39;</span><span class="sc">{</span><span class="st">&#39;Josh&#39;</span><span class="sc">}</span><span class="ss"> bought a </span><span class="sc">{</span><span class="dv">1</span><span class="sc">}</span><span class="ss"> gallon bottle of </span><span class="sc">{</span><span class="st">&#39;milk&#39;</span><span class="sc">}</span><span class="ss">.&#39;</span></span></code></pre></div></div><b>False</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;Josh bought&#39;</span> <span class="op">+</span> <span class="st">&#39;a&#39;</span> <span class="op">+</span> <span class="st">&#39;1&#39;</span> <span class="op">+</span> <span class="st">&#39;gallon bottle of milk.&#39;</span></span></code></pre></div></div><b>False</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;%s bought a %d gallon %s of milk&#39;</span> <span class="op">%</span> (<span class="st">&#39;Josh&#39;</span>, <span class="dv">1</span>, <span class="st">&#39;bottle&#39;</span>)</span></code></pre></div></div><b>Correct</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;Josh bought {} {} {} bottle of milk.&#39;</span>.<span class="bu">format</span>(<span class="st">&#39;a&#39;</span>, <span class="dv">1</span>, <span class="st">&#39;gallon&#39;</span>)</span></code></pre></div></div><b>Correct</b></li></ul></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>Length of lists / Listenlänge</h2><h3>Punkte / Points: 2 Kprim</h3><h3>Frage / Question</h3><div><p>EN: Which of the following lists has a length of 4?</p><p>DE: Welche der folgenden Listen haben die Länge 4?</p></div><h3>Antworten / Answers</h3><ul><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>[name, <span class="st">&#39;bb&#39;</span>, age]</span></code></pre></div></div><b>False</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(<span class="bu">range</span>(x <span class="op">-</span> <span class="dv">10</span>, x, <span class="dv">3</span>))</span></code></pre></div></div><b>Correct</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>[[<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">1</span>], <span class="dv">1</span>] <span class="op">+</span> [<span class="dv">1</span>]</span></code></pre></div></div><b>Correct</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>[[foo, (<span class="st">&#39;b&#39;</span>,<span class="st">&#39;a&#39;</span>,<span class="st">&#39;r&#39;</span>), [baz,[<span class="dv">42</span>]]]]</span></code></pre></div></div><b>False</b></li></ul></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>List operations / Listenoperationen</h2><h3>Punkte / Points: 2 Kprim</h3><h3>Frage / Question</h3><div><p>EN: Which of the following code snippets can be used to compute the length of any list?</p><p>DE: Welche der folgenden Codesnippets können benutzt werden um die Länge einer beliebigen Liste zu berechnen?</p></div><h3>Antworten / Answers</h3><ul><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(l):</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>   <span class="cf">return</span> <span class="dv">2</span> <span class="op">+</span> <span class="bu">len</span>(l[<span class="dv">2</span>:])</span></code></pre></div></div><b>False</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(l):</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>   <span class="cf">return</span> <span class="dv">1</span> <span class="op">+</span> func(l[<span class="dv">1</span>:]) <span class="cf">if</span> l <span class="cf">else</span> <span class="dv">0</span></span></code></pre></div></div><b>Correct</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(l):</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">def</span> inner(l, n):</span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a>       <span class="cf">return</span> n <span class="op">+</span> <span class="dv">1</span> <span class="cf">if</span> <span class="kw">not</span> l <span class="cf">else</span> inner(l[<span class="dv">1</span>:], n <span class="op">+</span> <span class="dv">1</span>)</span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a>   <span class="cf">return</span> inner(l, <span class="dv">0</span>)</span></code></pre></div></div><b>False</b></li><li><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(l):</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>   x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a>   <span class="cf">for</span> _ <span class="kw">in</span> l:</span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a>       x <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a>   <span class="cf">return</span> x</span></code></pre></div></div><b>Correct</b></li></ul></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>Procedural and recursive / Prozedural und rekursiv</h2><h3>Punkte / Points: 2 Kprim</h3><h3>Frage / Question</h3><div><p>EN: Which of the following Statements are correct?</p><p>DE: Welche der folgenden Aussagen sind korrekt?</p></div><h3>Antworten / Answers</h3><ul><li><div><div><p>EN: To solve the same problem, many different algorithms can exist.</p><p>DE: Um dasselbe Problem zu lösen, kann es viele unterschiedliche Algorithmen geben.</p></div></div><b>Correct</b></li><li><div><div><p>EN: For any recursive algorithm there always exists a procedural routine that can carry out the same calculations.</p><p>DE: Für jeden rekursiven Algorithmus gibt es einen prozeduralen Weg, der dieselben Berechnungen durchführen kann.</p></div></div><b>Correct</b></li><li><div><div><p>EN: Python allows for infinite recursive calls for any recursive function.</p><p>DE: In Python kann man beliebig viele rekursive Aufrufe einer rekursiven Funktion machen.</p></div></div><b>False</b></li><li><div><div><p>EN: Python programs cannot consist solely of recursive functions.</p><p>DE: Ein Pythonprogramm kann nicht ausschliesslich aus rekursiven Funktionen bestehen.</p></div></div><b>False</b></li></ul></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>Reading code / Code lesen</h2><h3>Punkte / Points: 2 Kprim</h3><h3>Frage / Question</h3><div><p>EN: Which of the following are correct statements about the implementation given below?</p><p>DE: Welche der folgenden Aussagen treffen auf die gegebene Implementation zu?</p></div><h3>Snippet</h3><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>lst <span class="op">=</span> []</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>lst.append((<span class="dv">1</span>, <span class="st">&#39;a&#39;</span>, <span class="va">True</span>))</span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a>lst.extend([(<span class="dv">2</span>,), (<span class="dv">3</span>, <span class="st">&#39;c&#39;</span>, <span class="va">False</span>)])</span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a>lst <span class="op">+</span> [(<span class="dv">4</span>, <span class="st">&#39;d&#39;</span>, <span class="va">True</span> <span class="kw">and</span> <span class="va">False</span>)]</span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (n, s, b) <span class="kw">in</span> lst:</span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a>   x <span class="op">+=</span> n</span>
+<span id="8"><a href="#8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;x = </span><span class="sc">{x}</span><span class="ss">&#39;</span>)</span></code></pre></div><h3>Antworten / Answers</h3><ul><li><div><div><p>EN: At the end of the script, the length of &#39;lst&#39; is equal to 4.</p><p>DE: Am ende des scripts ist die Länge von &#39;lst&#39; 4</p></div></div><b>False</b></li><li><div><div><p>EN: Instead of constructing the list &#39;lst&#39; in multiple steps, it could have been declared and assigned a value in a single statement.</p><p>DE: Anstatt die Liste &#39;lst&#39; in mehreren Schritten zu konstruieren, hätte man sie in einem einzigen statement deklarieren und ihr einen Wert zuweisen können.</p></div></div><b>Correct</b></li><li><div><div><p>EN: When run, the script prints: x = {x}.</p><p>DE: Wenn man das script ausführt wird x = {x} geprintet.</p></div></div><b>False</b></li><li><div><div><p>EN: The for loop assumes the list carries tuples of the same size.</p><p>DE: Der for loop geht davon aus, dass die Liste Tupel der gleichen grösse enthält.</p></div></div><b>Correct</b></li></ul></div></div></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>Programming 2</h2><h3>Gefragt / Asked: 1</h3><div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>encoder</h2><h3>Punkte / Points: 18</h3><h3>Frage / Question</h3>
+<h5>DEUTSCH</h5>
+<p>
+    Implementieren Sie eine Funktion
+    <span style="font-family: terminal, monaco, monospace;">is_valid_encoding</span>,
+    welche drei Parameter annimmt: zwei Strings
+    <span style="font-family: terminal, monaco, monospace;">a</span>
+    und
+    <span style="font-family: terminal, monaco, monospace;">b</span>,
+    sowie ein dictionary
+    <span style="font-family: terminal, monaco, monospace;">mapping</span>,
+    welches chars als Keys und beliebig lange Strings als Werte enthält.
+    Die Funktion soll
+    <span style="font-family: terminal, monaco, monospace;">True</span>
+    zurückgeben, wenn die Zeichensequenz in
+    <span style="font-family: terminal, monaco, monospace;">a</span>
+    mithilfe der Zuweisungen in
+    <span style="font-family: terminal, monaco, monospace;">mappings</span>
+    in den String in
+    <span style="font-family: terminal, monaco, monospace;">b</span>
+    umgewandelt werden kann. Ansonsten soll die Funktion
+    <span style="font-family: terminal, monaco, monospace;">False</span>
+    zurückgeben.
+    Falls die ersten zwei Parameter beide
+    <span style="font-family: terminal, monaco, monospace;">None</span>
+    oder beides leere Strings sind, soll ebenfalls
+    <span style="font-family: terminal, monaco, monospace;">True</span>
+    zurückgegeben werden.
+    Beachten Sie die Assertions als Beispiele für die Anwendung von
+    <span style="font-family: terminal, monaco, monospace;">can_derive</span>.
+</p>
+
+
+<h5>ENGLISH</h5>
+<p>
+    Implement a function
+    <span style="font-family: terminal, monaco, monospace;">is_valid_encoding</span>,
+    which takes three parameters: two strings
+    <span style="font-family: terminal, monaco, monospace;">a</span>
+    and
+    <span style="font-family: terminal, monaco, monospace;">b</span>,
+    and a dictionary
+    <span style="font-family: terminal, monaco, monospace;">mapping</span>
+    which has characters as keys and arbitrarily long strings as values.
+    The function should return
+    <span style="font-family: terminal, monaco, monospace;">True</span>
+    if it is possible to translate the string in
+    <span style="font-family: terminal, monaco, monospace;">a</span>
+    to the string in b
+    <span style="font-family: terminal, monaco, monospace;">b</span>.
+    using the mappings in
+    <span style="font-family: terminal, monaco, monospace;">mapping</span>
+    If the first two parameters are both
+    <span style="font-family: terminal, monaco, monospace;">None</span>
+    or both empty strings, the function should also return
+    <span style="font-family: terminal, monaco, monospace;">True</span>.
+    Consider the assert statements given below as examples for
+    <span style="font-family: terminal, monaco, monospace;">can_derive</span>.
+</p>
+
+<p>Fügen Sie ihre Lösung in folgendes Textfeld ein / Paste your solution into the following text field.</p>
+<div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_valid_encoding(a, b, mapping):</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(is_valid_encoding(None, None, {}))</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(is_valid_encoding(None, None, {&#39;i&#39;: &quot;don&#39;t care&quot;}))</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(not is_valid_encoding(None, &#39;&#39;, {}))</span></span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(not is_valid_encoding(&#39;&#39;, None, {}))</span></span>
+<span id="8"><a href="#8" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(is_valid_encoding(&#39;cat&#39;, &#39;dog&#39;, {&#39;c&#39;: &#39;d&#39;, &#39;a&#39;: &#39;o&#39;, &#39;t&#39;: &#39;g&#39;}))</span></span>
+<span id="9"><a href="#9" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(is_valid_encoding(&#39;a&#39;, &#39;archer&#39;, {&#39;a&#39;: &#39;archer&#39;}))</span></span>
+<span id="10"><a href="#10" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(is_valid_encoding(&#39;no&#39;, &#39;yes&#39;, {&#39;n&#39;: &#39;y&#39;, &#39;o&#39;: &#39;es&#39;, &#39;z&#39;: &#39;z&#39;}))</span></span></code></pre></div></div><h3>Lösung / Solution</h3><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> is_valid_encoding(a, b, mapping):</span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If they&#39;re both exaclty None or empty, true.</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> a <span class="op">==</span> b <span class="kw">and</span> (a <span class="op">==</span> <span class="va">None</span> <span class="kw">or</span> a <span class="op">==</span> <span class="st">&#39;&#39;</span>):</span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">True</span></span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># If one is None and the other empty, false.</span></span>
+<span id="8"><a href="#8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> (a <span class="op">==</span> <span class="va">None</span> <span class="kw">and</span> b <span class="op">==</span> <span class="st">&#39;&#39;</span>) <span class="kw">or</span> (a <span class="op">==</span> <span class="st">&#39;&#39;</span> <span class="kw">and</span> b <span class="op">==</span> <span class="va">None</span>):</span>
+<span id="9"><a href="#9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span>
+<span id="10"><a href="#10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Otherwise check bindings.</span></span>
+<span id="11"><a href="#11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="12"><a href="#12" aria-hidden="true" tabindex="-1"></a>        tmp <span class="op">=</span> <span class="st">&#39;&#39;</span>.join([mapping.get(i, i) <span class="cf">for</span> i <span class="kw">in</span> a])</span>
+<span id="13"><a href="#13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> tmp <span class="op">==</span> b</span></code></pre></div></div></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>min_max_if_num</h2><h3>Punkte / Points: 18</h3><h3>Frage / Question</h3>
+<h5>DEUTSCH</h5>
+<p>
+    Implementieren Sie eine Funktion
+    <span style="font-family: terminal, monaco, monospace;">min_max_of</span>,
+    welche eine Liste von beliebigen Werten
+    <span style="font-family: terminal, monaco, monospace;">values</span>,
+    annimmt und ein Tupel zurückgibt, welches den maximalen und minimalen numerischen Wert enthält, sofern solche Werte in der Liste vorkommen.
+    Falls keine entsprechenden numerischen Werte vorkommen, soll ein Tupel zurückgegeben werden, wo beide Werte
+    <span style="font-family: terminal, monaco, monospace;">None</span>
+    sind.
+    Falls die minimalen und maximalen Werte identisch sind, soll nur der Minimalwert im Tupel vorkommen und das zweite Tupelelement soll
+    <span style="font-family: terminal, monaco, monospace;">None</span>
+    sein.
+    Beachten Sie die Assertions als Beispiele für die Anwendung von
+    <span style="font-family: terminal, monaco, monospace;">min_max_of</span>.
+</p>
+
+
+
+<h5>ENGLISH</h5>
+<p>
+    Implement a function
+    <span style="font-family: terminal, monaco, monospace;">min_max_of</span>,
+    which takes a list of arbitrary values
+    <span style="font-family: terminal, monaco, monospace;">values</span>,
+    and returns the tuple of the minimum and maximum numerical values in the list, if any exist.
+    If the minimum and maximum values are equal, only the minimum value should appear in the tuple, while the second tuple element should be
+    <span style="font-family: terminal, monaco, monospace;">None</span>
+    Consider the assert statements given below as examples for
+    <span style="font-family: terminal, monaco, monospace;">min_max_of</span>.
+</p>
+
+<p>Fügen Sie ihre Lösung in folgendes Textfeld ein / Paste your solution into the following text field.</p>
+<div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> min_max_of(values):</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(min_max_of(None) == (None, None))</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(min_max_of([]) == (None, None))</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(min_max_of([True]) == (None, None))</span></span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(min_max_of([0, 0.0]) == (0, None))</span></span>
+<span id="8"><a href="#8" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(min_max_of([0, 0.0]) == (0.0, None))</span></span>
+<span id="9"><a href="#9" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(min_max_of([-1, 0, 1]) == (-1, 1))</span></span>
+<span id="10"><a href="#10" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(min_max_of([&#39;a&#39;, &#39;A&#39;, 1]) == (1, None))</span></span></code></pre></div></div><h3>Lösung / Solution</h3><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> min_max_of(values):</span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Initialise return values to base assumption.</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a>    l, u <span class="op">=</span> <span class="va">None</span>, <span class="va">None</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ensure list is not null.</span></span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> n <span class="kw">in</span> values <span class="cf">if</span> values <span class="cf">else</span> []:</span>
+<span id="8"><a href="#8" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Filter elements of supported number types.</span></span>
+<span id="9"><a href="#9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">isinstance</span>(n, (<span class="bu">int</span>, <span class="bu">float</span>)) <span class="kw">and</span> <span class="kw">not</span> <span class="bu">isinstance</span>(n, <span class="bu">bool</span>):</span>
+<span id="10"><a href="#10" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Update lower and upper values.</span></span>
+<span id="11"><a href="#11" aria-hidden="true" tabindex="-1"></a>            l <span class="op">=</span> n <span class="cf">if</span> <span class="kw">not</span> l <span class="kw">or</span> n <span class="op">&lt;</span> l <span class="cf">else</span> l</span>
+<span id="12"><a href="#12" aria-hidden="true" tabindex="-1"></a>            u <span class="op">=</span> n <span class="cf">if</span> <span class="kw">not</span> u <span class="kw">or</span> n <span class="op">&gt;</span> u <span class="cf">else</span> u</span>
+<span id="13"><a href="#13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="14"><a href="#14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Equal min and max: report min only.</span></span>
+<span id="15"><a href="#15" aria-hidden="true" tabindex="-1"></a>    u <span class="op">=</span> <span class="va">None</span> <span class="cf">if</span> l <span class="op">==</span> u <span class="cf">else</span> u</span>
+<span id="16"><a href="#16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> l, u</span></code></pre></div></div></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>multiples_of</h2><h3>Punkte / Points: 18</h3><h3>Frage / Question</h3>
+<h5>DEUTSCH</h5>
+<p>Implementieren Sie eine Funktion <span style="font-family: terminal, monaco, monospace;">multiples_of</span>, welche zwei Zahlen als Parameter annimmt: eine beliebige Zahl <span style="font-family: terminal, monaco, monospace;">n</span> und eine weitere Zahl <span style="font-family: terminal, monaco, monospace;">count</span>. Die Funktion soll <span style="font-family: terminal, monaco, monospace;">n</span> mit jedem Integer von <span style="font-family: terminal, monaco, monospace;">1</span> bis <span style="font-family: terminal, monaco, monospace;">count</span> multiplizieren und ein Dictionary zurückgeben, wo jeder Key ein Multiplikator und jeder zugehöriger Value <span style="font-family: terminal, monaco, monospace;">n</span> mal dem Multiplikator entspricht. Sehen Sie sich die Assertions für konkrete Beispiele an.</p>
+
+<p>Wenn <span style="font-family: terminal, monaco, monospace;">count</span> null ist, soll die Funktion ein leeres Dictionary zurückgeben.</p>
+
+<p>Wenn <span style="font-family: terminal, monaco, monospace;">count</span> kleiner als null oder kein Integer ist, soll die Funktion <span style="font-family: terminal, monaco, monospace;">False</span> zurückgeben.</p>
+
+<p>Sie können davon ausgehen, dass die Funktion nur mit zwei Zahlen aufgerufen wird.</p>
+
+
+<h5>ENGLISH</h5>
+<p>Implement a function <span style="font-family: terminal, monaco, monospace;">multiples_of</span>, which takes two numbers as parameters: an arbitrary number <span style="font-family: terminal, monaco, monospace;">n</span> and another number <span style="font-family: terminal, monaco, monospace;">count</span>. The function should multiply  <span style="font-family: terminal, monaco, monospace;">n</span> with each integer number from <span style="font-family: terminal, monaco, monospace;">1</span> to <span style="font-family: terminal, monaco, monospace;">count</span> and return a dictionary where each key is the multipier and each corresponding value is <span style="font-family: terminal, monaco, monospace;">n</span> times the multiplier. See the assertions below for concrete examples.</p>
+
+<p>If <span style="font-family: terminal, monaco, monospace;">count</span> is zero, the function should return an empty dictionary.</p>
+
+<p>If <span style="font-family: terminal, monaco, monospace;">count</span> is smaller than zero or not an integer, the function should return <span style="font-family: terminal, monaco, monospace;">False</span>.</p>
+
+<p>You can assume that the function is only called with two numbers as parameters.</p>
+
+<p>Fügen Sie ihre Lösung in folgendes Textfeld ein / Paste your solution into the following text field.</p>
+<div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> multiples_of(n, count):</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a><span class="co">#assert(multiples_of(3, 4)  == {1: 3, 2: 6, 3: 9, 4: 12})</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a><span class="co">#assert(multiples_of(2, 0)  == {})</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a><span class="co">#assert(multiples_of(0, 3)  == {1: 0, 2: 0, 3: 0})</span></span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a><span class="co">#assert(multiples_of(-2, 3) == {1: -2, 2: -4, 3: -6})</span></span></code></pre></div></div><h3>Lösung / Solution</h3><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> multiples_of(n, count):</span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> <span class="bu">isinstance</span>(count, <span class="bu">int</span>) <span class="kw">or</span> count <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># manually:</span></span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a>    res <span class="op">=</span> {}</span>
+<span id="8"><a href="#8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, count<span class="op">+</span><span class="dv">1</span>):</span>
+<span id="9"><a href="#9" aria-hidden="true" tabindex="-1"></a>        res[i] <span class="op">=</span> i<span class="op">*</span>n</span>
+<span id="10"><a href="#10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> res</span>
+<span id="11"><a href="#11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># using a dict comprehension:</span></span>
+<span id="12"><a href="#12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {i: n<span class="op">*</span>i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,count<span class="op">+</span><span class="dv">1</span>)}</span>
+<span id="13"><a href="#13" aria-hidden="true" tabindex="-1"></a></span></code></pre></div></div></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>recursive_format</h2><h3>Punkte / Points: 18</h3><h3>Frage / Question</h3>
+<h5>DEUTSCH</h5>
+<p>
+    Implementieren Sie eine Funktion
+    <span style="font-family: terminal, monaco, monospace;">recursive_format</span>,
+    welche eine Liste
+    <span style="font-family: terminal, monaco, monospace;">tree</span>
+    als einzigen Parameter annimmt.
+    <span style="font-family: terminal, monaco, monospace;">tree</span>
+    kann Strings enthalten, aber auch eingebettete Listen, die wiederum Strings
+    und tiefer eingebettete Listen enthalten.
+    Die Funktion soll einen einzigen String basierend auf
+    <span style="font-family: terminal, monaco, monospace;">tree</span>
+    wie folgt zurückgeben:
+    <ul>
+        <li>
+        Strings in
+        <span style="font-family: terminal, monaco, monospace;">tree</span>
+        sollen aneinandergereiht werden, separiert durch einzelne Leerzeichen.
+        </li>
+        <li>
+        Eingebettete Listen sollen mittels einem rekursiven Aufruf von
+        <span style="font-family: terminal, monaco, monospace;">recursive_format</span>
+        genau gleich verarbeitet werden, wie
+        <span style="font-family: terminal, monaco, monospace;">tree</span>
+        und der resultierende Rückgabewert soll dem Ergebnis in Klammern hinzugefügt werden.
+        </li>
+    </ul>
+
+    Beachten Sie die Assertions als Beispiele für die Anwendung von
+    <span style="font-family: terminal, monaco, monospace;">recursive_format</span>.
+</p>
+
+
+<h5>ENGLISH</h5>
+<p>
+    Implement a function
+    <span style="font-family: terminal, monaco, monospace;">recursive_format</span>,
+    which takes a list
+    <span style="font-family: terminal, monaco, monospace;">tree</span>
+    as the only parameter.
+    <span style="font-family: terminal, monaco, monospace;">tree</span>
+    can contain strings but also nested lists, which in turn again can contain
+    both strings and more deeply nested lists.
+    The function should return a single string constructed from
+    <span style="font-family: terminal, monaco, monospace;">tree</span>
+    as follows:
+    <ul>
+        <li>
+        Strings in
+        <span style="font-family: terminal, monaco, monospace;">tree</span>
+        should be strung together separated by a single space.
+        </li>
+        <li>
+        Nested lists should be processed by a recursive call to
+        <span style="font-family: terminal, monaco, monospace;">recursive_format</span>
+        exactly the same way as
+        <span style="font-family: terminal, monaco, monospace;">tree</span>
+        itself and the resulting return value should be added to the result,
+        enclosed by parantheses.
+        </li>
+    </ul>
+
+    Consider the assert statements given below as examples for
+    <span style="font-family: terminal, monaco, monospace;">recursive_format</span>.
+</p>
+
+<p>Fügen Sie ihre Lösung in folgendes Textfeld ein / Paste your solution into the following text field.</p>
+<div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> recursive_format(tree):</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(recursive_format([]) == &quot;&quot;)</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(recursive_format([[]]) == &quot;()&quot;)</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(recursive_format([&quot;Hi&quot;, &quot;there&quot;, [&quot;Jack&quot;, &quot;and&quot;, &quot;Bobby&quot;], &quot;!&quot;])</span></span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a><span class="co">#                       == &quot;Hi there (Jack and Bobby) !&quot;)</span></span>
+<span id="8"><a href="#8" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(recursive_format([&quot;What&quot;, &quot;is&quot;, [&quot;going&quot;, [&quot;on&quot;], &quot;here?&quot;]])</span></span>
+<span id="9"><a href="#9" aria-hidden="true" tabindex="-1"></a><span class="co">#                       == &quot;What is (going (on) here?)&quot;)</span></span></code></pre></div></div><h3>Lösung / Solution</h3><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> recursive_format(tree):</span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a>    res <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a>    elems <span class="op">=</span> []</span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> node <span class="kw">in</span> tree:</span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">isinstance</span>(node, <span class="bu">str</span>):</span>
+<span id="8"><a href="#8" aria-hidden="true" tabindex="-1"></a>            elems.append(node)</span>
+<span id="9"><a href="#9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="10"><a href="#10" aria-hidden="true" tabindex="-1"></a>            elems.append(<span class="ss">f&quot;(</span><span class="sc">{</span>recursive_format(node)<span class="sc">}</span><span class="ss">)&quot;</span>)</span>
+<span id="11"><a href="#11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&quot; &quot;</span>.join(elems)</span>
+<span id="12"><a href="#12" aria-hidden="true" tabindex="-1"></a></span></code></pre></div></div></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>string_derivation</h2><h3>Punkte / Points: 18</h3><h3>Frage / Question</h3>
+<h5>DEUTSCH</h5>
+<p>
+    Implementieren Sie eine Funktion
+    <span style="font-family: terminal, monaco, monospace;">can_derive</span>,
+    welche einen String
+    <span style="font-family: terminal, monaco, monospace;">s</span>
+    und ein Dictionary
+    <span style="font-family: terminal, monaco, monospace;">chars</span>.
+    annimmt, wo die Keys vom Typ char und die Werte vom Typ int sind.
+    Das Dictionary beschreibt, wie oft jeder Buchstabe benutzt werden kann.
+    Somit soll die Funktion einen bool zurückgeben der angibt, ob genügend Buchstaben in
+    <span style="font-family: terminal, monaco, monospace;">chars</span>
+    vorhanden sind, um den String in
+    <span style="font-family: terminal, monaco, monospace;">s</span>
+    zu konstruieren. Wenn ja, soll
+    <span style="font-family: terminal, monaco, monospace;">True</span>
+    zurückgegeben werden, ansonsten
+    <span style="font-family: terminal, monaco, monospace;">False</span>.
+    Beachten Sie die Assertions als Beispiele für die Anwendung von
+    <span style="font-family: terminal, monaco, monospace;">can_derive</span>.
+</p>
+
+
+
+<h5>ENGLISH</h5>
+<p>
+    Implement a function
+    <span style="font-family: terminal, monaco, monospace;">can_derive</span>,
+    which takes a string
+    <span style="font-family: terminal, monaco, monospace;">s</span>,
+    and a dictionary
+    <span style="font-family: terminal, monaco, monospace;">chars</span>
+    where the keys are of type char and the values are of type int.
+    The dictionary describes, how many times each character can
+    be used. Hence, the function should return a bool, stating whether there are sufficient
+    characters to construct the given string
+    <span style="font-family: terminal, monaco, monospace;">s</span>.
+    If yes, the function should return
+    <span style="font-family: terminal, monaco, monospace;">True</span>,
+    <span style="font-family: terminal, monaco, monospace;">False</span>
+    otherwise.
+    Consider the assert statements given below as examples for
+    <span style="font-family: terminal, monaco, monospace;">can_derive</span>.
+</p>
+
+<p>Fügen Sie ihre Lösung in folgendes Textfeld ein / Paste your solution into the following text field.</p>
+<div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> can_derive(s, chars):</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(can_derive(&#39;&#39;, {}))</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(not can_derive(&#39;hello&#39;, {}))</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(can_derive(&#39;aabb&#39;, {&#39;a&#39;: 2, &#39;b&#39;: 2}))</span></span></code></pre></div></div><h3>Lösung / Solution</h3><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> can_derive(s, chars):</span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a>    check <span class="op">=</span> <span class="va">True</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Keep track of chars already visited.</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a>    checked <span class="op">=</span> []</span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># For each char not already visited.</span></span>
+<span id="8"><a href="#8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> c <span class="kw">in</span> s:</span>
+<span id="9"><a href="#9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> c <span class="kw">in</span> checked:</span>
+<span id="10"><a href="#10" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Mark as visited.</span></span>
+<span id="11"><a href="#11" aria-hidden="true" tabindex="-1"></a>            checked.append(c)</span>
+<span id="12"><a href="#12" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Count how many times this is found in the string.</span></span>
+<span id="13"><a href="#13" aria-hidden="true" tabindex="-1"></a>            n_occs <span class="op">=</span> <span class="bu">sum</span>([c <span class="op">==</span> i <span class="cf">for</span> i <span class="kw">in</span> s])</span>
+<span id="14"><a href="#14" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Check we have enough of such chars in the dictionary.</span></span>
+<span id="15"><a href="#15" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> n_occs <span class="op">&gt;</span> chars.get(c, <span class="dv">0</span>):</span>
+<span id="16"><a href="#16" aria-hidden="true" tabindex="-1"></a>                check <span class="op">=</span> <span class="va">False</span></span>
+<span id="17"><a href="#17" aria-hidden="true" tabindex="-1"></a>                <span class="cf">break</span></span>
+<span id="18"><a href="#18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> check</span></code></pre></div></div></div></div></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>Questions 3</h2><h3>Gefragt / Asked: 2</h3><div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>Scopes / Scopes</h2><h3>Punkte / Points: 2 Kprim</h3><h3>Frage / Question</h3><div><p>EN: Which of the following statements are true about the Python script given below?</p><p>DE: Welche der folgenden Aussagen treffen auf dieses Python script zu?</p></div><h3>Snippet</h3><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>lst <span class="op">=</span> [[<span class="dv">2</span>]]</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func1(lst):</span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a>   lst <span class="op">=</span> lst <span class="op">+</span> [<span class="dv">1</span>, <span class="dv">2</span>]</span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a>   <span class="bu">print</span>(lst)</span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func2(lst):</span>
+<span id="8"><a href="#8" aria-hidden="true" tabindex="-1"></a>   lst.append([<span class="dv">1</span>, <span class="dv">2</span>])</span>
+<span id="9"><a href="#9" aria-hidden="true" tabindex="-1"></a>   <span class="bu">print</span>(lst)</span></code></pre></div><h3>Antworten / Answers</h3><ul><li><div><div><p>EN: Invoking &#39;func1&#39; on &#39;lst&#39; (declared in line 1) at the end of the script, would result in &#39;lst&#39; (declared in line 1) being of length 3.</p><p>DE: Wenn man &#39;func1&#39; mit &#39;lst&#39; (deklariert auf Zeile 1) aufruft, wird &#39;lst&#39; (deklariert auf Zeile 1 am Ende des Scripts die Länge 3 haben.</p></div></div><b>False</b></li><li><div><div><p>EN: Invoking &#39;func2&#39; on &#39;lst&#39; (declared in line 1) at the end of the script, would result in &#39;lst&#39; (declared in line 1) being of size 2.</p><p>DE: Wenn man &#39;func2&#39; mit &#39;lst&#39; (deklariert auf Zeile 1) aufruft, wird &#39;lst&#39; (deklariert auf Zeile 1 am Ende des Scripts die Länge 2 haben.</p></div></div><b>Correct</b></li><li><div><div><p>EN: Invoking &#39;func1&#39; on &#39;[]&#39; at the end of the script, would result in &#39;lst&#39; (declared in line 1) being of size 2.</p><p>DE: Wenn man &#39;func1&#39; mit &#39;[]&#39; aufruft, wird &#39;lst&#39; (deklariert auf Zeile 1) am Ende des Scripts die Länge 2 haben.</p></div></div><b>False</b></li><li><div><div><p>EN: Invoking &#39;func2&#39; on &#39;[]&#39; at the end of the script, would result in &#39;lst&#39; (declared in line 1) being of size 1.</p><p>DE: Wenn man &#39;func2&#39; mit &#39;[]&#39; aufruft, wird &#39;lst&#39; (deklariert auf Zeile 1) am Ende des Scripts die Länge 1 haben.</p></div></div><b>Correct</b></li></ul></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>Scopes and assignments / Scopes und Zuweisungen</h2><h3>Punkte / Points: 2 Kprim</h3><h3>Frage / Question</h3><div><p>EN: Which of the following statements are true about the python script given below?</p><p>DE: Welche der folgenden Aussage treffen auf dieses Pythonscript zu?</p></div><h3>Snippet</h3><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> (<span class="dv">1</span>, [])</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(a, lst):</span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a>   a[<span class="dv">0</span>] <span class="op">=</span> lst <span class="op">+</span> lst</span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a>   a <span class="op">+=</span> [(<span class="dv">3</span>, <span class="dv">4</span>), lst]</span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a>   <span class="cf">return</span> a</span></code></pre></div><h3>Antworten / Answers</h3><ul><li><div><div><p>EN: Execution would crash if &#39;func(a, a)&#39; is called at the end of the script.</p><p>DE: Das Script stürzt ab wenn man &#39;func(a, a)&#39; am Ende des Scripts ausführen würde.</p></div></div><b>Correct</b></li><li><div><div><p>EN: Invoking &#39;func([a], a)&#39; at the end of the script would return a list of length 3.</p><p>DE: Ein Aufruf von &#39;func([a], a)&#39; am Ende des Scripts würde eine Liste der Länge 3 zurückgeben.</p></div></div><b>Correct</b></li><li><div><div><p>EN: Execution would crash if &#39;func(a, True) is called at the end of the script.</p><p>DE: Das Script stürzt ab wenn man &#39;func(a, True) am Ende des Scripts ausführen würde.</p></div></div><b>False</b></li><li><div><div><p>EN: Invoking &#39;func((a), (a,))&#39; at the end of the script would return a list of length 3.</p><p>DE: Ein Aufruf von &#39;func((a), (a,))&#39; am Ende des Scripts würde eine Liste der Länge 3 zurückgeben.</p></div></div><b>False</b></li></ul></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>Scopes and recursion / Scopes und Rekursion</h2><h3>Punkte / Points: 2 Kprim</h3><h3>Frage / Question</h3><div><p>EN: Which of the following statements are true about the python script given below?</p><p>DE: Welche der folgenden Aussagen treffen auf dieses Pythonscript zu?</p></div><h3>Snippet</h3><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">1</span></span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">0</span></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> []</span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(a):</span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a>   <span class="cf">if</span> a <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a>       b <span class="op">=</span> <span class="op">-</span><span class="dv">1</span></span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a>   <span class="cf">elif</span> a <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="8"><a href="#8" aria-hidden="true" tabindex="-1"></a>       c.append(<span class="op">-</span><span class="dv">2</span>)</span>
+<span id="9"><a href="#9" aria-hidden="true" tabindex="-1"></a>   <span class="cf">else</span>:</span>
+<span id="10"><a href="#10" aria-hidden="true" tabindex="-1"></a>       a <span class="op">=</span> func(a <span class="op">-</span> <span class="dv">1</span>) <span class="op">-</span> <span class="dv">3</span></span>
+<span id="11"><a href="#11" aria-hidden="true" tabindex="-1"></a>   <span class="cf">return</span> a</span>
+<span id="12"><a href="#12" aria-hidden="true" tabindex="-1"></a>func(x)</span></code></pre></div><h3>Antworten / Answers</h3><ul><li><div><div><p>EN: Assigning the value &#39;-9&#39; to &#39;x&#39; and running the script above leads to variable &#39;b&#39; (declared in line 2) carrying the value &#39;0&#39;.</p><p>DE: Wenn man &#39;x&#39; den Wert &#39;-9&#39; zuweist und das Script ausführt, wird b (deklariert auf Zeile 2) den Wert &#39;0&#39; haben.</p></div></div><b>Correct</b></li><li><div><div><p>EN: Assigning the value &#39;3&#39; to &#39;x&#39; and running the script above leads to variable &#39;a&#39; (declared in line 1) carrying the value &#39;-9&#39;.</p><p>DE: Wenn man &#39;x&#39; den Wert &#39;3&#39; zuweist und das Script ausführt, wird a (deklariert auf Zeile 1) den Wert &#39;-9&#39; haben.</p></div></div><b>False</b></li><li><div><div><p>EN: Assigning the value &#39;2&#39; to &#39;x&#39; and running the script above leads to variable &#39;a&#39; (declared in line 1) carrying the value &#39;1&#39;.</p><p>DE: Wenn man &#39;x&#39; den Wert &#39;2&#39; zuweist und das Script ausführt, wird a (deklariert auf Zeile 1) den Wert &#39;1&#39; haben.</p></div></div><b>Correct</b></li><li><div><div><p>EN: The values assigned to the variables &#39;a&#39;, &#39;b&#39;, &#39;c&#39; in lines 1, 2 and 3 respectively can never change when executing the script, regardless of the value carried by &#39;x&#39;.</p><p>DE: Die Werte der Variabeln &#39;a&#39;, &#39;b&#39; und &#39;c&#39; auf Zeilen 1, 2 und 3 können sich nie ändern wenn man das Script ausführt, egal welchen Wert &#39;x&#39; hat.</p></div></div><b>False</b></li></ul></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>Manipulating sequences recursively / Sequenzen rekursiv manipulieren</h2><h3>Punkte / Points: 2 Kprim</h3><h3>Frage / Question</h3><div><p>EN: Which of the following statements are true about the python script given below?</p><p>DE: Welche der folgenden Aussagen treffen auf dieses Pythonscript zu?</p></div><h3>Snippet</h3><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(a, b):</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>   <span class="cf">return</span> func(a[<span class="dv">1</span>:], b) <span class="op">+</span> [b(a[<span class="dv">0</span>])] <span class="cf">if</span> a <span class="cf">else</span> []</span></code></pre></div><h3>Antworten / Answers</h3><ul><li><div><div><p>EN: With the definition of the function &#39;square&#39; as given below, invoking &#39;func([1, 2, 3], square())&#39;
+ returns the list &#39;[1, 4, 9]&#39;.
+
+def square(x):
+   return x*x</p><p>DE: Mit der oben angegebenen definition von &#39;square&#39; gibt ein Aufruf von &#39;func([1, 2, 3], square())&#39;
+ die Liste &#39;[1, 4, 9]&#39; zurück.</p></div></div><b>False</b></li><li><div><div><p>EN: With the definition of the function &#39;id&#39; as given below, for any list &#39;lst&#39;, &#39;func&#39; can be used to&#39; create another list containing the elements of &#39;lst&#39; in reverse order.
+
+def id(x):
+   return x</p><p>DE: Mit der oben angegebenen definition von &#39;id&#39; kann man &#39;func&#39; benutzen um für eine beliebige Liste &#39;lst&#39; eine neue Liste zu generieren welche die Elemente von &#39;lst&#39; in umgekehrter Reihenfolge enthält.</p></div></div><b>Correct</b></li><li><div><div><p>EN: With the definition of the function &#39;func1&#39; as given below, invoking &#39;func([&#39;a&#39;, &#39;b&#39;, &#39;c&#39;], todo)&#39; returns the list &#39;[None, None, None].
+
+def todo(x):
+   pass</p><p>DE: Mit der oben angegebenen definition von &#39;todo&#39; gibt ein Aufruf von &#39;func([&#39;a&#39;, &#39;b&#39;, &#39;c&#39;], todo)&#39; die Liste &#39;[None, None, None]&#39; zurück.</p></div></div><b>Correct</b></li><li><div><div><p>EN: The function &#39;func&#39; is guaranteed to crash if &#39;a&#39; is a tuple.</p><p>DE: Die Funktion &#39;func&#39; wird garantiert abstürzen wenn &#39;a&#39; ein Tupel ist.</p></div></div><b>False</b></li></ul></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>Using dictionaries. / Verwendung von Dictionaries.</h2><h3>Punkte / Points: 2 Kprim</h3><h3>Frage / Question</h3><div><p>EN: Which of the following statements are true about the python script given below?</p><p>DE: Welche der folgenden Aussagen treffen auf dieses Pythonscript zu?</p></div><h3>Snippet</h3><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a>str_freq <span class="op">=</span> {}</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(str_list):</span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a>    str_freq <span class="op">=</span> {}</span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> s <span class="kw">in</span> str_list:</span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a>        str_freq[s] <span class="op">=</span> str_freq[s] <span class="op">+</span> <span class="dv">1</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> str_freq</span></code></pre></div><h3>Antworten / Answers</h3><ul><li><div><div><p>EN: Function &#39;func&#39; contains a bug guaranteed to lead to a crash for any non empty instance of &#39;str_list&#39;.</p><p>DE: Die Funktion &#39;func&#39; enthält einen Bug, der für beliebige nicht-leere Werte für &#39;str_list&#39; garantiert zu einem crash führt.</p></div></div><b>Correct</b></li><li><div><div><p>EN: Function &#39;func&#39; contains a bug guaranteed to lead to a crash for any instance of &#39;str_list&#39;.</p><p>DE: Die Funktion &#39;func&#39; enthält einen Bug, der für beliebige Werte für &#39;str_list&#39; garantiert zu einem crash führt.</p></div></div><b>False</b></li><li><div><div><p>EN: Every time function &#39;func&#39; is invoked the value of &#39;str_freq&#39; (declared in line 1) is overwritten.</p><p>DE: Wann immer die Funktion &#39;func&#39; aufgerufen wird, wird der Wert von &#39;str_freq&#39; (deklariert auf Zeile 1) überschrieben.</p></div></div><b>False</b></li><li><div><div><p>EN: Function &#39;func&#39; when invoked as is on any value of &#39;str_freq&#39;, can never modify the value of &#39;str_freq&#39; (declared in line 1).</p><p>DE: Egal mit welchem Wert für &#39;str_freq&#39; die Funktion &#39;func&#39; aufgerufen wird, sie kann niemals den Wert von &#39;str_freq&#39; (deklariert auf Zeile 1) verändern.</p></div></div><b>Correct</b></li></ul></div></div></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>Programming 3</h2><h3>Gefragt / Asked: 1</h3><div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>parsing</h2><h3>Punkte / Points: 18</h3><h3>Frage / Question</h3>
+<h5>DEUTSCH</h5>
+<p>
+    Implementieren Sie eine Funktion
+    <span style="font-family: terminal, monaco, monospace;">parse</span>
+    welche einen einzigen String als einzigen Parameter
+    <span style="font-family: terminal, monaco, monospace;">text</span>
+    annimmt. Dieser String kann folgendes enthalten:
+    <ul>
+        <li> Worte (Sequenzen von ASCII Buchstaben A bis Z und a bis z) </li>
+        <li> Integer, und </li>
+        <li> Floats, </li>
+    </ul>
+    getrennt durch eine beliebige anzahl Leerzeichen.
+    Die Funktion soll eine Liste zurückgeben, die alle individuellen Element aus
+    <span style="font-family: terminal, monaco, monospace;">text</span>
+    in der folgenden Reihenfolge enthält: Erst alle Worte, dann alle Integer, dann alle Floats.
+    Innerhalb dieser drei Gruppen sollen die Elemente in der natürlichen Reihenfolge sortiert sein,
+    wie sie Python mittels den Funktionen
+    <span style="font-family: terminal, monaco, monospace;">sorted()</span>
+    und
+    <span style="font-family: terminal, monaco, monospace;">.sort()</span>
+    anbietet (d.h. Sie müssen keinen Sortieralgorithmus selber implementieren).
+
+    Sie können davon ausgehen, dass
+    <span style="font-family: terminal, monaco, monospace;">text</span>
+    der
+    <span style="font-family: terminal, monaco, monospace;">parse</span>
+    übergeben wird, nur Zeichen wie oben spezifiziert enthält.
+    Sie müssen nicht überprüfen, ob ungültige Zeichensequenzen vorkommen.
+
+    Beachten Sie die Assertions als Beispiele für die Anwendung von
+    <span style="font-family: terminal, monaco, monospace;">parse</span>.
+</p>
+
+
+<h5>ENGLISH</h5>
+<p>
+    Implement a function
+    <span style="font-family: terminal, monaco, monospace;">parse</span>
+    which takes a single String
+    <span style="font-family: terminal, monaco, monospace;">text</span>
+    as the only parameter. This string can contain:
+    <ul>
+        <li> Words (sequences of ASCII characters A through Z and a through z) </li>
+        <li> Integers, and </li>
+        <li> Floats, </li>
+    </ul>
+    separated by any number of spaces.
+    The function should return a list containing all the individual elements from
+    <span style="font-family: terminal, monaco, monospace;">text</span>
+    in the following order: first all the words, then all the integers, then all the floats.
+    Within each of these three groups, the elements should be sorted in the natural order that
+    Python provides via the
+    <span style="font-family: terminal, monaco, monospace;">sorted()</span>
+    and
+    <span style="font-family: terminal, monaco, monospace;">.sort()</span>
+    functions (i.e. you do not need to manually implemented a sorting algorithm).
+
+    You may assume that any
+    <span style="font-family: terminal, monaco, monospace;">text</span>
+    passed to
+    <span style="font-family: terminal, monaco, monospace;">parse</span>
+    will only contain characters as described above.
+    You do not need to perform input validation.
+
+    Consider the assert statements given below as examples for
+    <span style="font-family: terminal, monaco, monospace;">parse</span>.
+</p>
+
+<p>Fügen Sie ihre Lösung in folgendes Textfeld ein / Paste your solution into the following text field.</p>
+<div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> parse(text):</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(parse(&quot;&quot;) == [])</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(parse(&quot;B A 2.5 1 5.5 C 2&quot;) == [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, 1, 2, 2.5, 5.5])</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(parse(&quot;B A 1 2&quot;) == [&quot;A&quot;, &quot;B&quot;, 1, 2])</span></span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(parse(&quot;  2.5        5.5 2 abc Abcd 1 Abc  &quot;) == [&quot;Abc&quot;, &quot;Abcd&quot;, &quot;abc&quot;, 1, 2, 2.5, 5.5])</span></span></code></pre></div></div><h3>Lösung / Solution</h3><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> parse(text):</span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a>    strings <span class="op">=</span> []</span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a>    ints <span class="op">=</span> []</span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a>    floats <span class="op">=</span> []</span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a>    tokens <span class="op">=</span> text.split()</span>
+<span id="8"><a href="#8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> token <span class="kw">in</span> tokens:</span>
+<span id="9"><a href="#9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="st">&quot;.&quot;</span> <span class="kw">in</span> token:</span>
+<span id="10"><a href="#10" aria-hidden="true" tabindex="-1"></a>            floats.append(<span class="bu">float</span>(token))</span>
+<span id="11"><a href="#11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> token.isdigit():</span>
+<span id="12"><a href="#12" aria-hidden="true" tabindex="-1"></a>            ints.append(<span class="bu">int</span>(token))</span>
+<span id="13"><a href="#13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="14"><a href="#14" aria-hidden="true" tabindex="-1"></a>            strings.append(token)</span>
+<span id="15"><a href="#15" aria-hidden="true" tabindex="-1"></a>    res <span class="op">=</span> []</span>
+<span id="16"><a href="#16" aria-hidden="true" tabindex="-1"></a>    res.extend(<span class="bu">sorted</span>(strings))</span>
+<span id="17"><a href="#17" aria-hidden="true" tabindex="-1"></a>    res.extend(<span class="bu">sorted</span>(ints))</span>
+<span id="18"><a href="#18" aria-hidden="true" tabindex="-1"></a>    res.extend(<span class="bu">sorted</span>(floats))</span>
+<span id="19"><a href="#19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> res</span>
+<span id="20"><a href="#20" aria-hidden="true" tabindex="-1"></a></span></code></pre></div></div></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>repair_bill</h2><h3>Punkte / Points: 18</h3><h3>Frage / Question</h3>
+<h5>DEUTSCH</h5>
+<p>
+    Implementieren Sie eine Funktion
+    <span style="font-family: terminal, monaco, monospace;">bill</span>,
+    welche folgende Parameter annimmt:
+    <ol>
+        <li>
+            <span style="font-family: terminal, monaco, monospace;">per_hour</span>:
+            eine Gleitkommazahl die den Stundensatz eines Arbeiters angibt und
+        </li>
+        <li>
+            <span style="font-family: terminal, monaco, monospace;">parts_prices_hours</span>:
+            ein Dictionary in der Form
+            <span style="font-family: terminal, monaco, monospace;">{part: (price, hours)}</span>,
+            wo
+            <span style="font-family: terminal, monaco, monospace;">part</span>
+            der Name eines Bauteils ist,
+            <span style="font-family: terminal, monaco, monospace;">price</span>
+            den Preis des Bauteils repräsentiert, und
+            <span style="font-family: terminal, monaco, monospace;">hours</span>
+            die Anzahl Stunden als Gleitkommazahl repräsentiert, die benötigt werden, um das Bauteil zu installieren.
+            <span style="font-family: terminal, monaco, monospace;">price</span>
+            und
+            <span style="font-family: terminal, monaco, monospace;">hours</span>
+            können für gewisse Einträge in
+            <span style="font-family: terminal, monaco, monospace;">parts_prices_hours</span>
+            <span style="font-family: terminal, monaco, monospace;">None</span>
+            sein.
+        </li>
+    </ol>
+    Die Funktion soll ein Tupel mit zwei Elementen zurückgeben, wo das erste Element die totalen Kosten
+    für den Kauf und die Installation aller Teile angibt, und das zweite Element ein boolean ist, welcher angibt,
+    ob irgendwelche Informationen für die Berechnung fehlten.
+
+    Die Kosten für die Installation eines einzelnen Teil soll wie folgt berechnet werden:
+    <span style="font-family: terminal, monaco, monospace;"></span>
+        part_price + (parts_hours * per_hour)
+    </span>
+    und die totalen Kosten berechnen sich aus der Summe der Kosten für die Installation aller Teile.
+
+    Wenn
+    <span style="font-family: terminal, monaco, monospace;">price</span>
+    eines Teils
+    <span style="font-family: terminal, monaco, monospace;">None</span>,
+    ist, soll ein Preis von 0 für dieses Teil angenommen werden, und wenn
+    <span style="font-family: terminal, monaco, monospace;">hours</span>,
+    für ein Teil
+    <span style="font-family: terminal, monaco, monospace;">None</span>
+    ist, soll eine Stunde angenommen werden.
+
+    Beachten Sie die Assertions als Beispiele für die Anwendung von
+    <span style="font-family: terminal, monaco, monospace;">bill</span>.
+</p>
+
+
+<h5>ENGLISH</h5>
+<p>
+    Implement a function
+    <span style="font-family: terminal, monaco, monospace;">bill</span>,
+    which takes as parameters:
+    <ol>
+        <li>
+            <span style="font-family: terminal, monaco, monospace;">per_hour</span>:
+            a float representing the hourly rate of a worker, and
+        </li>
+        <li>
+            <span style="font-family: terminal, monaco, monospace;">parts_prices_hours</span>:
+            a dictionary of the form
+            <span style="font-family: terminal, monaco, monospace;">{part: (price, hours)}</span>,
+            where
+            <span style="font-family: terminal, monaco, monospace;">part</span>
+            is the name of a part,
+            <span style="font-family: terminal, monaco, monospace;">price</span>
+            is a float representing the price of that part, and
+            <span style="font-family: terminal, monaco, monospace;">hours</span>
+            is a float representing the total amount of hours
+            needed to install that part.
+            <span style="font-family: terminal, monaco, monospace;">price</span>
+            and
+            <span style="font-family: terminal, monaco, monospace;">hours</span>
+            can be
+            <span style="font-family: terminal, monaco, monospace;">None</span>
+            for some entries in
+            <span style="font-family: terminal, monaco, monospace;">parts_prices_hours</span>.
+        </li>
+    </ol>
+    The function should return a tuple with two items, where the first item represents the total cost of buying
+    and installing all of the parts and the second item is a boolean, reporting whether some information
+    was missing whilst computing the total cost.
+
+    The cost for installing each individual part should be computed as:
+    <span style="font-family: terminal, monaco, monospace;"></span>
+        part_price + (parts_hours * per_hour)
+    </span>
+    and the total cost is the sum of installing all parts.
+
+    If the
+    <span style="font-family: terminal, monaco, monospace;">price</span>
+    of a part is
+    <span style="font-family: terminal, monaco, monospace;">None</span>,
+    a zero cost should be assumed for that part, and if
+    <span style="font-family: terminal, monaco, monospace;">hours</span>,
+    of a part is
+    <span style="font-family: terminal, monaco, monospace;">None</span>
+    one hour should be assumed.
+
+    Consider the assert statements given below as examples for
+    <span style="font-family: terminal, monaco, monospace;">bill</span>.
+</p>
+
+<p>Fügen Sie ihre Lösung in folgendes Textfeld ein / Paste your solution into the following text field.</p>
+<div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bill(per_hour, parts_prices_hours):</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(bill(0, {&#39;Door&#39;: (23.33, 2.50)}) == (23.33, False))</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(bill(0, {}) == (0, False))</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(bill(0, {&#39;Door&#39;: (None, 3.0)}) == (0, True))</span></span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(bill(50, {&#39;Door&#39;: (None, 3.0)}) == (150, True))</span></span>
+<span id="8"><a href="#8" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(bill(50, {&#39;Door&#39;: (10, None)}) == (60, True))</span></span>
+<span id="9"><a href="#9" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(bill(10.5, {&#39;Door&#39;: (None, 3.0), &#39;Window&#39;: (22.22, 0.5)}) == (58.97, True))</span></span>
+<span id="10"><a href="#10" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(bill(10.5, {&#39;Window&#39;: (22.22, 0.5)}) == (27.47, False))</span></span></code></pre></div></div><h3>Lösung / Solution</h3><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bill(per_hour, parts_prices_hours):</span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a>    missing <span class="op">=</span> <span class="va">False</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> cost, hours <span class="kw">in</span> parts_prices_hours.values():</span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> cost <span class="op">==</span> <span class="va">None</span>:</span>
+<span id="8"><a href="#8" aria-hidden="true" tabindex="-1"></a>            cost <span class="op">=</span> <span class="dv">0</span></span>
+<span id="9"><a href="#9" aria-hidden="true" tabindex="-1"></a>            missing <span class="op">=</span> <span class="va">True</span></span>
+<span id="10"><a href="#10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> hours <span class="op">==</span> <span class="va">None</span>:</span>
+<span id="11"><a href="#11" aria-hidden="true" tabindex="-1"></a>            hours <span class="op">=</span> <span class="dv">1</span></span>
+<span id="12"><a href="#12" aria-hidden="true" tabindex="-1"></a>            missing <span class="op">=</span> <span class="va">True</span></span>
+<span id="13"><a href="#13" aria-hidden="true" tabindex="-1"></a>        total <span class="op">+=</span> (hours <span class="op">*</span> per_hour) <span class="op">+</span> cost</span>
+<span id="14"><a href="#14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (total, missing)</span>
+<span id="15"><a href="#15" aria-hidden="true" tabindex="-1"></a></span></code></pre></div></div></div><div style="padding: 24px;margin: 24px;box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"><h2>shopping</h2><h3>Punkte / Points: 18</h3><h3>Frage / Question</h3>
+<h5>DEUTSCH</h5>
+<p>
+    Implementieren Sie eine Funktion
+    <span style="font-family: terminal, monaco, monospace;">organise</span>,
+    die eine Liste
+    <span style="font-family: terminal, monaco, monospace;">records</span>
+    annimmt, welche null oder mehrere Kaufereignisse enthält.
+    Diese Liste enthält Tupel in der Form
+    <span style="font-family: terminal, monaco, monospace;">(username, shop_name, day_of_week)</span>,
+    wobei:
+    <span style="font-family: terminal, monaco, monospace;">username</span>
+    ein String ist, der den Namen eines Kunden enthält (z.b. 'Tom'),
+    <span style="font-family: terminal, monaco, monospace;">shop_name</span>
+    ein String ist, der den Namen eines Ladens enthält (z.b. 'Denner'), und
+    <span style="font-family: terminal, monaco, monospace;">day_of_week</span>
+    eine Zahl zwischen 1 und (einschliesslich) 7 ist, welche den Wochentag
+    zwischen Montag und Sonntag repräsentiert.
+    Semantisch gibt jeder Eintrag an, dass ein gewisser Kunde in einem bestimmten
+    Laden an einem bestimmten Wochentag eingekauft hat.
+    Somit soll
+    <span style="font-family: terminal, monaco, monospace;">organise</span>
+    die Einträge verarbeiten, um ein Profil des Kaufverhaltens jedes Kunden zu erstellen.
+    Das Kaufverhalten soll in einem Dictionary abgebildet werden, welches wie folgt strukturiert ist:
+    <span style="font-family: terminal, monaco, monospace;">{username: {shop_name: {day_of_week: counter}}}</span>.
+    Das bedeutet, dass für jeden Kunden (
+        <span style="font-family: terminal, monaco, monospace;">{username: ...}</span>
+    ), ein Dictionary erstellt wird, welches wiederum für jeden Laden (
+        <span style="font-family: terminal, monaco, monospace;">{shop_name: ...}</span>
+    ) ein Dictionary enthält, welches die Anzahl Besuche (
+        <span style="font-family: terminal, monaco, monospace;">counter</span>
+    ) für jeden Wochentag angibt (
+        <span style="font-family: terminal, monaco, monospace;">{day_of_week: counter}</span>
+    ).
+    Ihre Implementation von
+    <span style="font-family: terminal, monaco, monospace;">organise</span>,
+    soll alle Einträge kommentarlos ignorieren, wo
+    <span style="font-family: terminal, monaco, monospace;">username</span>
+    oder
+    <span style="font-family: terminal, monaco, monospace;">shop_name</span>
+    None oder leere Strings sind, und ebenfalls wenn
+    <span style="font-family: terminal, monaco, monospace;">day_of_week</span>
+    ausserhalb der oben angegebenen Reichweite ist.
+    Beachten Sie die Assertions als Beispiele für die Anwendung von
+    <span style="font-family: terminal, monaco, monospace;">organise</span>.
+</p>
+
+
+<h5>ENGLISH</h5>
+<p>
+    Implement a function
+    <span style="font-family: terminal, monaco, monospace;">organise</span>,
+    which takes a list of zero or more purchase events
+    <span style="font-family: terminal, monaco, monospace;">records</span>.
+    This is a list of tuples where each tuple represents a purchase and follows the pattern
+    <span style="font-family: terminal, monaco, monospace;">(username, shop_name, day_of_week)</span>,
+    where:
+    <span style="font-family: terminal, monaco, monospace;">username</span>
+    is a string carrying the identifier of a user (eg: 'Tom'),
+    <span style="font-family: terminal, monaco, monospace;">shop_name</span>
+    is a string carrying the identifier of a shop (eg: 'Denner'), and
+    <span style="font-family: terminal, monaco, monospace;">day_of_week</span>
+    is an integer between 1 and 7 (included) representing the day of the
+    week from Monday to Sunday. Semantically, each record
+    indicates that a certain user visited a certain shop on a certain
+    day of the week. Hence,
+    <span style="font-family: terminal, monaco, monospace;">organise</span>
+    processes these records to create a concise profile of the buying habits
+    for every user. These buying habits should be represented in a dictionary structured as:
+    <span style="font-family: terminal, monaco, monospace;">{username: {shop_name: {day_of_week: counter}}}</span>.
+    This means that for each user (
+        <span style="font-family: terminal, monaco, monospace;">{username: ...}</span>
+    ), a dictionary is created which in turn for each shop (
+        <span style="font-family: terminal, monaco, monospace;">{shop_name: ...}</span>
+    ) creates a nested dictionary carrying the number of times (
+        <span style="font-family: terminal, monaco, monospace;">counter</span>
+    ) the user visited on a certain day of the week (
+        <span style="font-family: terminal, monaco, monospace;">{day_of_week: counter}</span>
+    ).
+    Your implementation of
+    <span style="font-family: terminal, monaco, monospace;">organise</span>,
+    should quietly ignore all tuples in the provided list where
+    <span style="font-family: terminal, monaco, monospace;">username</span>
+    or
+    <span style="font-family: terminal, monaco, monospace;">shop_name</span>
+    are None or an empty string, and also if
+    <span style="font-family: terminal, monaco, monospace;">day_of_week</span>
+    is outside the range specified above.
+    Consider the assert statements given below as examples for
+    <span style="font-family: terminal, monaco, monospace;">organise</span>.
+</p>
+
+<p>Fügen Sie ihre Lösung in folgendes Textfeld ein / Paste your solution into the following text field.</p>
+<div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> organise(records):</span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(organise([]) == {})</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(organise([(&#39;Tom&#39;, &#39;&#39;, 5), (&#39;Tom&#39;, &#39;Aldi&#39;, 4)]) == {&#39;Tom&#39;: {&#39;Aldi&#39;: {4: 1</span><span class="re">}}}</span><span class="co">)</span></span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(organise([(&#39;Tom&#39;, &#39;Aldi&#39;, 5), (&#39;Tom&#39;, &#39;Aldi&#39;, 5)]) == {&#39;Tom&#39;: {&#39;Aldi&#39;: {5: 2</span><span class="re">}}}</span><span class="co">)</span></span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a><span class="co"># assert(organise([(&#39;Tom&#39;, &#39;Aldi&#39;, 1), (&#39;Tom&#39;, &#39;Migros&#39;, 4), (&#39;Jack&#39;, &#39;Aldi&#39;, 5)]) == {&#39;Jack&#39;: {&#39;Aldi&#39;: {5: 1}}, &#39;Tom&#39;: {&#39;Aldi&#39;: {1: 1}, &#39;Migros&#39;: {4: 1</span><span class="re">}}}</span><span class="co">)</span></span></code></pre></div></div><h3>Lösung / Solution</h3><div><div class="sourceCode"><pre class="sourceCode"><code class="sourceCode"><span id="1"><a href="#1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span>
+<span id="2"><a href="#2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="3"><a href="#3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> organise(records):</span>
+<span id="4"><a href="#4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># { user: {shop -&gt; {day -&gt; counter</span><span class="re">}}}</span></span>
+<span id="5"><a href="#5" aria-hidden="true" tabindex="-1"></a>    res <span class="op">=</span> {}</span>
+<span id="6"><a href="#6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> person, shop, day <span class="kw">in</span> records:</span>
+<span id="7"><a href="#7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> person <span class="kw">and</span> shop <span class="kw">and</span> (<span class="dv">0</span> <span class="op">&lt;</span> day <span class="op">&lt;</span> <span class="dv">8</span>):</span>
+<span id="8"><a href="#8" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> person <span class="kw">not</span> <span class="kw">in</span> res:</span>
+<span id="9"><a href="#9" aria-hidden="true" tabindex="-1"></a>                res[person] <span class="op">=</span> {}</span>
+<span id="10"><a href="#10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> shop <span class="kw">not</span> <span class="kw">in</span> res[person]:</span>
+<span id="11"><a href="#11" aria-hidden="true" tabindex="-1"></a>                res[person][shop] <span class="op">=</span> {}</span>
+<span id="12"><a href="#12" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> day <span class="kw">not</span> <span class="kw">in</span> res[person][shop]:</span>
+<span id="13"><a href="#13" aria-hidden="true" tabindex="-1"></a>                res[person][shop][day] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="14"><a href="#14" aria-hidden="true" tabindex="-1"></a>            res[person][shop][day] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="15"><a href="#15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> res</span>
+<span id="16"><a href="#16" aria-hidden="true" tabindex="-1"></a></span></code></pre></div></div></div></div></div></body></html>
